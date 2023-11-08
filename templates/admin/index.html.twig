@@ -1,0 +1,37 @@
+{# templates/admin/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block body %}
+  <h1>Panel administracyjny - Użytkownicy</h1>
+  <a href="admin/create">Dodaj użytkownika</a>
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Imię</th>
+      <th scope="col">Nazwisko</th>
+      <th scope="col">Email</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Stanowisko</th>
+      <th scope="col">Edytuj</th>
+      <th scope="col">Usuń</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for users in users %}
+      <tr>
+        <th scope="row">{{ users.id }}</th>
+        <td>{{ users.firstName }}</td>
+        <td>{{ users.lastName }}</td>
+        <td>{{ users.email }}</td>
+        <td>{{ users.description }}</td>
+        <td>{{ users.jobPosition }}</td>
+        <td><a href="admin/edit/{{ users.id }}">Edytuj</a></td>
+        <td><a class="link-danger" href="admin/delete/{{ users.id }}">Usuń</a></td>
+      </tr>
+    {% endfor %}
+
+    </tbody>
+  </table>
+{% endblock %}

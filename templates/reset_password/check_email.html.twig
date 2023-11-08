@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wysłano wiadomość{% endblock %}
+
+{% block body %}
+  <div class="container text-center" style="width: 40%;">
+    <p>
+      Jeśli Twój email pasuje do zarejestrowanego konta, otrzymasz od nas link, którym będziesz mógł edytować swoje
+      hasło.
+      Link wygaśnie w ciągu 1 godziny.
+    </p>
+    <p>Jeśli nie dostałeś wiadomości sprawdź folder SPAM lub <a href="{{ path('app_forgot_password_request') }}">spróbuj
+        ponownie</a>.</p>
+  </div>
+{% endblock %}

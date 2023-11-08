@@ -1,0 +1,29 @@
+<h1>Dziękujemy za rejestrację!</h1>
+<p>Potwierdź adres email klikając w link poniżej:</p>
+<a href="{{ signedUrl|raw }}" class="btn btn-primary" role="button">Potwierdź email</a>.
+<p>Link wygaśnie w ciągu 1 godziny.</p>
+
+<h2>Dane logowania</h2>
+<p><b>Twój email to:</b> {{ user.email }}</p>
+<p><b>Twoje hasło to:</b> {{ plainPassword }}</p>
+
+<h2>Dane z formularza</h2>
+<p><b>Imie:</b> {{ user.firstName }}</p>
+<p><b>Nazwisko:</b> {{ user.lastName }}</p>
+<p><b>Opis:</b> {{ user.description }}</p>
+<p><b>Stanowisko:</b> {{ user.jobPosition }}</p>
+
+{% if testerInfo %}
+  <h2>Informacje o Testerze</h2>
+  <p>{{ testerInfo|raw|nl2br }}</p>
+{% endif %}
+
+{% if developerInfo %}
+  <h2>Informacje o Developerze</h2>
+  <p>{{ developerInfo|raw|nl2br }}</p>
+{% endif %}
+
+{% if projectManagerInfo %}
+  <h2>Informacje o Project Managerze</h2>
+  <p>{{ projectManagerInfo|raw|nl2br }}</p>
+{% endif %}

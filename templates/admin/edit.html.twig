@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edycja (Panel Administratora){% endblock %}
+
+{% block body %}
+  <div class="container text-center" style="width: 40%;">
+    {% for flash_error in app.flashes('verify_email_error') %}
+      <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+    <h1>Edytuj użytkownika</h1>
+    <a href="/admin">Panel Administratora</a>
+
+    <form method="post">
+      {{ form_start(registrationForm, {'attr': {'class': 'form-signin'}}) }}
+
+      {{ form_row(registrationForm.firstName, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Podaj imię'}}) }}
+      {{ form_row(registrationForm.lastName, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Podaj nazwisko'}}) }}
+      {{ form_row(registrationForm.email, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Podaj email'}}) }}
+      {{ form_row(registrationForm.description, {'label': ' ', 'attr': {'class': 'form-control mb-2', 'placeholder': 'Wpisz opis'}}) }}
+      {{ form_row(registrationForm.jobPosition, {'label': 'Wybierz stanowisko', 'attr': {'class': 'form-control my-2'}}) }}
+
+      {{ form(registrationForm) }}
+
+      {{ form_end(registrationForm) }}
+
+      <p class="mt-3">Posiadasz już konto? <a href="{{ path('app_login') }}">Zaloguj się</a></p>
+    </form>
+  </div>
+
+{% endblock %}

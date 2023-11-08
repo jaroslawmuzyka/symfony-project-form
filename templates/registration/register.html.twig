@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rejestracja{% endblock %}
+
+{% block body %}
+  <div class="container text-center" style="width: 40%;">
+    {% for flash_error in app.flashes('verify_email_error') %}
+      <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+    {% endfor %}
+    <h1>Rejestracja</h1>
+
+    <form method="post">
+      {{ form_start(registrationForm, {'attr': {'class': 'form-signin'}}) }}
+
+      {{ form_row(registrationForm.firstName, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Wpisz imię'}}) }}
+      {{ form_row(registrationForm.lastName, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Wpisz nazwisko'}}) }}
+      {{ form_row(registrationForm.email, {'label': ' ', 'attr': {'class': 'form-control', 'placeholder': 'Wpisz adres email' }}) }}
+      {{ form_row(registrationForm.description, {'label': ' ', 'attr': {'class': 'form-control mb-2', 'placeholder': 'Wpisz opis', 'required': false}}) }}
+      {{ form_row(registrationForm.jobPosition, {'label': 'Wybierz stanowisko', 'attr': {'class': 'form-control my-2'}}) }}
+
+      {{ form(registrationForm) }}
+
+      {{ form_end(registrationForm) }}
+
+      <p class="mt-3">Posiadasz już konto? <a href="{{ path('app_login') }}">Zaloguj się</a></p>
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Zalogowano{% endblock %}
+
+{% block body %}
+  <div class="container text-center">
+    <h1>Zalogowano na konto:</h1>
+    <p>{{ app.user.email }}</p>
+    <a href="{{ path('app_logout') }}">Wyloguj się</a>
+  </div>
+{% endblock %}
+
+
+
+
+
+
