@@ -69,6 +69,15 @@ Można też założyć własne konto:
 3. Naśiśnij na "Show Credentials" i wybierz z rozwijanej listy "Symfony
 4. Skopiuj MAILER_DSN i zmień go do pliku .env
 
+## 🔗 Przykładowe linki (zmień port na własny)
+- Logowanie http://localhost:37213/login
+- Rejestracja http://localhost:37213/register
+- Resetowanie hasła http://localhost:37213/reset-password
+- Panel administratora http://localhost:37213/admin
+- Tworzenie użytkownika z PA http://localhost:37213/admin/create
+- Edycja użytkownika http://localhost:37213/admin/edit/1
+- Usunięcie użytkownika http://localhost:37213/admin/delete/1
+
 ## ✉️ Support
 
 kontakt@jaroslawmuzyka.pl
