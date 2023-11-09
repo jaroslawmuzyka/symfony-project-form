@@ -52,7 +52,7 @@ echo -e "${GREEN_BACKGROUND}\n\nAPLIKACJA JEST DOSTĘPNA POD ADRESEM: http://loc
 "APLIKACJA JEST DOSTĘPNA POD ADRESEM: [HTTP://LOCALHOST:TWOJ_PORT](http://localhost:TWOJ_PORT/)"
 
 
-## 📥 [MailTrap.io](https://mailtrap.io/) - serwis wysyła maile potwierdzające po rejestracji użytkownika.
+## 📥 [MailTrap.io](https://mailtrap.io/) - przechwytywanie emaili testowych
 
 Skorzystaj z danych demonstracyjnych poniżej (lub załóż konto) aby sprawdzić maile potwierdzające wraz ze szczegółami konta w mailu.
 
