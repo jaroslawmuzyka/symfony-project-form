@@ -9,7 +9,7 @@ Mikroserwis napisany z wykorzystaniem frameworka Symfony.
 
 ```bash
 # Pobierz repozytorium
-git clone https://github.com/webinvest1/dockerfotm.git project-symfony-form
+git clone https://github.com/jaroslawmuzyka/symfony-project-form project-symfony-form
 
 # Wejdź do katalogu projektu
 cd project-symfony-form
